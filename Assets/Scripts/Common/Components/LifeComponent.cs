@@ -10,7 +10,7 @@ namespace Common.Components
         
         [Networked]
         private TickTimer LifeTimer { get; set; }
-
+        
         public override void Spawned()
         {
             LifeTimer = TickTimer.CreateFromSeconds(Runner, _lifeTime);

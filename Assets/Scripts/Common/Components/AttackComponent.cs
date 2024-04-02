@@ -10,10 +10,10 @@ namespace Common.Components
         
         private void OnTriggerEnter(Collider other)
         {
-            Runner.Despawn(Object);
+            if (!other.TryGetComponent(out IDamageable damageable)) return;
             
-            if (other.TryGetComponent(out IDamageable damageable))
-                damageable.TakeDamage(_damage);
+            damageable.TakeDamage(_damage);
+            Runner.Despawn(Object);
         }
     }
 }

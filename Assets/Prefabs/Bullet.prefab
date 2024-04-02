@@ -64,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _lifeTime: 10
+  _prefab:
+    RawGuidValue: 42952733e6931fe47892b439f606b9e2
 --- !u!114 &8631223468621786390
 MonoBehaviour:
   m_ObjectHideFlags: 0
