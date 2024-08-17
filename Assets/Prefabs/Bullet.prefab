@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3041843839867531910}
   - component: {fileID: 1395288968752646124}
-  - component: {fileID: 2717976031278633177}
   - component: {fileID: 8631223468621786390}
   - component: {fileID: 3577136077310720912}
   - component: {fileID: 6842329302647430098}
@@ -50,22 +49,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbb7520c5ba3403d9f5bbcdc3ab7d7b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _teamComponent: {fileID: 0}
   _damage: 1
---- !u!114 &2717976031278633177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1306798046973562200}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ec87392434f42578fe399f96c782a1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _lifeTime: 10
-  _prefab:
-    RawGuidValue: 42952733e6931fe47892b439f606b9e2
 --- !u!114 &8631223468621786390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,8 +90,6 @@ MonoBehaviour:
   Flags: 262145
   NestedObjects: []
   NetworkedBehaviours:
-  - {fileID: 1395288968752646124}
-  - {fileID: 2717976031278633177}
   - {fileID: 8631223468621786390}
 --- !u!136 &6842329302647430098
 CapsuleCollider:

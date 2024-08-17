@@ -59,7 +59,12 @@
     "AssembliesToWeave": [
         "Fusion.Unity",
         "Assembly-CSharp",
-        "Assembly-CSharp-firstpass"
+        "Assembly-CSharp-firstpass",
+        "NetworkInput",
+        "NetworkStartup",
+        "Unit",
+        "Coloring",
+        "GameCycle"
     ],
     "UseSerializableDictionary": true,
     "NullChecksForNetworkedProperties": true,
