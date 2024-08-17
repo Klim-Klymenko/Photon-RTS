@@ -14,6 +14,8 @@ namespace Game.GameEngine.Entities
 
         public void TakeDamage(int damage)
         {
+            Debug.Log($"TAKE DAMAGE {damage}");
+            
             if (this.hitPoints > 0)
             {
                 this.hitPoints = Mathf.Max(0, hitPoints - damage);

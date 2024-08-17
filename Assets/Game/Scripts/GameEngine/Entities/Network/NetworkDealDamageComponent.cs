@@ -13,10 +13,13 @@ namespace Game.GameEngine.Entities
             _damageComponent = this.GetComponent<DealDamageComponent>();
         }
 
-        [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
+        [Rpc(RpcSources.StateAuthority, RpcTargets.All)]
         public void RpcDealDamage(NetworkObject target)
         {
-            _damageComponent.DealDamage(target.gameObject);
+            if (target != null && this.Object.isActiveAndEnabled)
+            {
+                _damageComponent.DealDamage(target.gameObject);
+            }
         }
     }
 }
