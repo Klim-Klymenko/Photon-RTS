@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 using System.GameCycle;
 using Fusion;
-using GameEngine.Features.Relocation;
 using GameEngine.Objects.Unit;
 using UnityEngine;
 
-namespace GameEngine.Features.Formation
+namespace GameEngine.Entities.Formation
 {
     internal sealed class FormationComponent : ISpawnable
     {
-        private RelocationComponent[] _agents;
+        private MovementAgent[] _agents;
         private NetworkObject[] _networkUnits;
         
         private readonly UnitService _unitService;
@@ -24,14 +23,14 @@ namespace GameEngine.Features.Formation
             IReadOnlyList<GameObject> alliedUnits = _unitService.GetAlliedUnits();
             int unitsCount = alliedUnits.Count;
             
-            _agents = new RelocationComponent[unitsCount];
+            _agents = new MovementAgent[unitsCount];
             _networkUnits = new NetworkObject[unitsCount];
             
             for (int i = 0; i < unitsCount; i++)
             {
                 GameObject unit = alliedUnits[i];
                 
-                _agents[i] = unit.GetComponent<RelocationComponent>();
+                _agents[i] = unit.GetComponent<MovementAgent>();
                 _networkUnits[i] = unit.GetComponent<NetworkObject>();
             }
         }

@@ -3,7 +3,7 @@ using System.Network.Input;
 using Fusion;
 using UnityEngine;
 
-namespace GameEngine.Features.Formation
+namespace GameEngine.Entities.Formation
 {
     internal sealed class FormationController : IFixedUpdatableNetwork
     {

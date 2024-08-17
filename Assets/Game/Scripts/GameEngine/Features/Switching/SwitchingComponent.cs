@@ -2,7 +2,7 @@
 using Fusion;
 using UnityEngine;
 
-namespace GameEngine.Features.Switching
+namespace GameEngine.Entities.Switching
 {
     internal sealed class SwitchingComponent : ISpawnable
     {

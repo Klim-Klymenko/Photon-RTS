@@ -5,7 +5,7 @@ using Common.Data;
 using Common.Installation;
 using UnityEngine;
 
-namespace GameEngine.Features.Switching
+namespace GameEngine.Entities.Switching
 {
     [Serializable]
     internal sealed class SwitchingInstaller : IFeatureInstaller

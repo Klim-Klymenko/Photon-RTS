@@ -6,7 +6,7 @@ using Common.Data;
 using Common.Installation;
 using UnityEngine;
 
-namespace GameEngine.Features.Movement
+namespace GameEngine.Entities.Movement
 {
     [Serializable]
     internal sealed class MovementInstaller : IFeatureInstaller
@@ -21,8 +21,8 @@ namespace GameEngine.Features.Movement
         {
             NetworkInputFacade input = serviceLocator.GetData<NetworkInputFacade>();
             
-            MovementComponent movementComponent = new(_transform, _speed);
-            MovementController movementController = new(movementComponent, input);
+            CamComponent camComponent = new(_transform, _speed);
+            MovementController movementController = new(camComponent, input);
             
             gameListeners.Add(movementController);
         }

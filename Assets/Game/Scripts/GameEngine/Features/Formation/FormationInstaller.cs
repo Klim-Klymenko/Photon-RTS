@@ -8,7 +8,7 @@ using Fusion;
 using GameEngine.Objects.Unit;
 using UnityEngine;
 
-namespace GameEngine.Features.Formation
+namespace GameEngine.Entities.Formation
 {
     [Serializable]
     internal sealed class FormationInstaller : IFeatureInstaller

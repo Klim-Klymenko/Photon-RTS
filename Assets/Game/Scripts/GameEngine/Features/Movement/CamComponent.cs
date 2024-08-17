@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 
-namespace GameEngine.Features.Movement
+namespace GameEngine.Entities.Movement
 {
-    internal sealed class MovementComponent
+    internal sealed class CamComponent
     {
         private readonly Transform _transform;
         private readonly float _speed;
 
-        internal MovementComponent(Transform transform, float speed)
+        internal CamComponent(Transform transform, float speed)
         {
             _transform = transform;
             _speed = speed;

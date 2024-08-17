@@ -2,22 +2,22 @@
 using UnityEngine;
 using System.Network.Input;
 
-namespace GameEngine.Features.Movement
+namespace GameEngine.Entities.Movement
 {
     internal sealed class MovementController : IFixedUpdatable
     {
-        private readonly MovementComponent _movementComponent;
+        private readonly CamComponent _camComponent;
         private readonly NetworkInputFacade _input;
 
-        internal MovementController(MovementComponent movementComponent, NetworkInputFacade input)
+        internal MovementController(CamComponent camComponent, NetworkInputFacade input)
         {
-            _movementComponent = movementComponent;
+            _camComponent = camComponent;
             _input = input;
         }
 
         void IFixedUpdatable.OnFixedUpdate()
         {
-            _movementComponent.Move(_input.MoveDirection, Time.fixedDeltaTime);
+            _camComponent.Move(_input.MoveDirection, Time.fixedDeltaTime);
         }
     }
 }

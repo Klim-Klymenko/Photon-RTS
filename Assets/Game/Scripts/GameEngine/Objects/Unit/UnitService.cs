@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.GameCycle;
 using Fusion;
-using GameEngine.Features.Team;
+using Game.GameEngine.Common;
+using Game.GameEngine.Entities;
 using UnityEngine;
 
 namespace GameEngine.Objects.Unit
@@ -14,13 +15,13 @@ namespace GameEngine.Objects.Unit
         void ISpawnable.OnSpawned(NetworkRunner runner, NetworkObject networkObject)
         {
             TeamComponent[] sceneUnits = Object.FindObjectsByType<TeamComponent>(FindObjectsSortMode.None);
-            TeamAffiliation teamAffiliation = networkObject.HasStateAuthority ? TeamAffiliation.Host : TeamAffiliation.Client;
+            TeamAffiliation teamAffiliation = networkObject.HasStateAuthority ? TeamAffiliation.Blue : TeamAffiliation.Red;
 
             for (int i = 0; i < sceneUnits.Length; i++)
             {
                 TeamComponent unit = sceneUnits[i];
 
-                if (unit.Team == teamAffiliation)
+                if (unit.Affiliation == teamAffiliation)
                     _alliedUnits.Add(unit.gameObject);
                 else
                     _enemyUnits.Add(unit.gameObject);
