@@ -1,7 +1,7 @@
 ﻿using Fusion;
 using UnityEngine;
 
-namespace GameEngine.Entities
+namespace Game.GameEngine.Entities
 {
     [RequireComponent(typeof(MoveComponent))]
     [RequireComponent(typeof(RotateComponent))]
@@ -16,13 +16,7 @@ namespace GameEngine.Entities
         private Vector3 destination;
         private bool isMoving;
 
-        [Rpc(RpcSources.All, RpcTargets.StateAuthority)]
-        public void RpcSetTargetPosition(Vector3 position)
-        {
-            this.SetTargetPosition(position);
-        }
-
-        public void SetTargetPosition(Vector3 targetPosition)
+        public void SetDestination(Vector3 targetPosition)
         {
             this.destination = targetPosition;
             this.isMoving = true;

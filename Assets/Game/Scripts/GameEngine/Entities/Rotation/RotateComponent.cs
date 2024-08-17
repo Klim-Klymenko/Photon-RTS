@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace GameEngine.Entities
+namespace Game.GameEngine.Entities
 {
     public sealed class RotateComponent : MonoBehaviour
     {

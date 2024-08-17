@@ -6,7 +6,7 @@ using UnityEngine;
 namespace System.Network.Spawn
 {
     [UsedImplicitly]
-    internal sealed class PlayerFactory : IFactory<NetworkObject, PlayerRef>
+    internal sealed class PlayerFactory
     {
         private readonly NetworkPrefabRef _playerPrefab;
         private readonly Vector3 _spawnPosition;
@@ -21,7 +21,7 @@ namespace System.Network.Spawn
             _runner = runner;
         }
 
-        NetworkObject IFactory<NetworkObject, PlayerRef>.Create(PlayerRef playerRef)
+        public NetworkObject Create(PlayerRef playerRef)
         {
             return _runner.Spawn(_playerPrefab, _spawnPosition, Quaternion.Euler(_spawnRotation), playerRef);
         }
