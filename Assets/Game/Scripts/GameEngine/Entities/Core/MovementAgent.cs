@@ -1,11 +1,10 @@
-﻿using Fusion;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game.GameEngine.Entities
 {
     [RequireComponent(typeof(MoveComponent))]
     [RequireComponent(typeof(RotateComponent))]
-    public sealed class MovementAgent : NetworkBehaviour
+    public sealed class MovementAgent : MonoBehaviour
     {
         [SerializeField] 
         private float stoppingDistance = 0.25f;
@@ -22,7 +21,7 @@ namespace Game.GameEngine.Entities
             this.isMoving = true;
         }
 
-        public override void FixedUpdateNetwork()
+        public void OnFixedUpdate(float deltaTime)
         {
             if (!this.isMoving)
             {
@@ -38,10 +37,10 @@ namespace Game.GameEngine.Entities
             }
             
             Vector3 normalizedDirection = direction.normalized;
-            _moveComponent.Move(normalizedDirection, this.Runner.DeltaTime);
+            _moveComponent.Move(normalizedDirection, deltaTime);
             _rotateComponent.Rotate(normalizedDirection);
         }
-        
+
         private bool IsReached(Vector3 direction)
         {
             return direction.sqrMagnitude <= stoppingDistance * stoppingDistance;

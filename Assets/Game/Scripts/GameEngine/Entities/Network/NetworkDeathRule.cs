@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.GameEngine.Entities
 {
     [RequireComponent(typeof(HealthComponent))]
-    public sealed class DeathComponent : NetworkBehaviour
+    public sealed class NetworkDeathRule : NetworkBehaviour
     {
         private HealthComponent _healthComponent;
 

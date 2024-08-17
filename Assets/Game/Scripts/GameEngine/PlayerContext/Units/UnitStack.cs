@@ -17,7 +17,6 @@ namespace Game.GameEngine.PlayerContext
 
         public IEnumerator<GameObject> GetEnumerator()
         {
-            throw new System.NotImplementedException();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

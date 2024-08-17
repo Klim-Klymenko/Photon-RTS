@@ -3,7 +3,7 @@ using UnityEngine;
 namespace Game.GameEngine.Entities
 {
     [RequireComponent(typeof(TeamComponent))]
-    public sealed class AttackComponent : MonoBehaviour
+    public sealed class DealDamageComponent : MonoBehaviour
     {
         [SerializeField]
         private int damage;
