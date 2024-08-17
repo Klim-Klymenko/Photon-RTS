@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Game.GameEngine.GameContext
 {
-    public sealed class CameraInput
+    public sealed class CameraInput : MonoBehaviour
     {
         private const string HorizontalAxis = "Horizontal";
         private const string VerticalAxis = "Vertical";

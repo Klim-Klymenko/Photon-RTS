@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6652033184898010036}
-  - component: {fileID: 7348885589527956204}
-  - component: {fileID: 1712919034057265608}
-  - component: {fileID: 2026476791208769100}
   - component: {fileID: 1353990734946538432}
   - component: {fileID: 1802353715550438126}
   - component: {fileID: 3742454342925717581}
@@ -38,75 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 35, y: 0, z: 0}
---- !u!114 &7348885589527956204
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543219504151225834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3a7ea97b64b410a918ab276bdd0034d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _installers:
-  - rid: 7494543229312565253
-  - rid: 7494543229312565250
-  - rid: 7494543229312565252
-  - rid: 7494543229312565251
-  - rid: 7494543229312565249
-  _gameCycleManager: {fileID: 2026476791208769100}
-  _inputReceiver: {fileID: 1712919034057265608}
-  _networkObject: {fileID: 6267440383510599828}
-  references:
-    version: 2
-    RefIds:
-    - rid: 7494543229312565249
-      type: {class: FormationInstaller, ns: GameEngine.Features.Formation, asm: Assembly-CSharp}
-      data:
-        _camera: {fileID: 1353990734946538432}
-        _maxRayDistance: 500
-        _groundLayer:
-          serializedVersion: 2
-          m_Bits: 8
-    - rid: 7494543229312565250
-      type: {class: ColoringInstaller, ns: GameEngine.Features.Coloring, asm: Assembly-CSharp}
-    - rid: 7494543229312565251
-      type: {class: MovementInstaller, ns: GameEngine.Features.Movement, asm: Movement}
-      data:
-        _transform: {fileID: 6652033184898010036}
-        _speed: 5
-    - rid: 7494543229312565252
-      type: {class: SwitchingInstaller, ns: GameEngine.Features.Switching, asm: Switching}
-      data:
-        _gameObject: {fileID: 543219504151225834}
-    - rid: 7494543229312565253
-      type: {class: UnitInstaller, ns: GameEngine.Objects.Unit, asm: Assembly-CSharp}
---- !u!114 &1712919034057265608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543219504151225834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1b6e805d0bd461d8780e2a2ded525a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2026476791208769100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543219504151225834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6757cb339ed642bfa1b0b8cd9dc7971a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!20 &1353990734946538432
 Camera:
   m_ObjectHideFlags: 0
@@ -198,6 +126,4 @@ MonoBehaviour:
   ObjectInterest: 1
   Flags: 262145
   NestedObjects: []
-  NetworkedBehaviours:
-  - {fileID: 1712919034057265608}
-  - {fileID: 2026476791208769100}
+  NetworkedBehaviours: []

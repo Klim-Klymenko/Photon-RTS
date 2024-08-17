@@ -1,7 +1,6 @@
-﻿using Game.GameEngine.Common;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Game.GameEngine.Entities
+namespace Game.GameEngine.Common
 {
     public sealed class TeamComponent : MonoBehaviour
     {

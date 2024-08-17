@@ -3,18 +3,19 @@ using UnityEngine;
 
 namespace Game.GameEngine.PlayerContext
 {
-    public sealed class UnitCommander : IUnitCommander
+    [RequireComponent(typeof(UnitStack))]
+    public sealed class UnitCommander : MonoBehaviour
     {
-        private readonly UnitStack _unitStack;
+        private UnitStack _unitStack;
 
-        public UnitCommander(UnitStack unitStack)
+        private void Awake()
         {
-            _unitStack = unitStack;
+            _unitStack = this.GetComponent<UnitStack>();
         }
 
         public void MoveToPosition(Vector3 targetPosition)
         {
-            foreach (GameObject unit in _unitStack)
+            foreach (GameObject unit in _unitStack.GetUnits())
             {
                 unit.GetComponent<MovementAgent>().SetDestination(targetPosition);
             }
