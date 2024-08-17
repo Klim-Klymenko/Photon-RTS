@@ -1,6 +1,5 @@
 using Fusion;
 using UnityEngine;
-using Zenject;
 
 namespace Game.GameEngine.PlayerContext
 {
@@ -8,7 +7,6 @@ namespace Game.GameEngine.PlayerContext
     {
         private IUnitCommander _unitCommander;
         
-        [Inject]
         private void Construct(UnitStack stack)
         {
             _unitCommander = new UnitCommander(stack);

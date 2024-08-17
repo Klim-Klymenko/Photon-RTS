@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Zenject;
 
 namespace Game.GameEngine.PlayerContext
 {
-    public sealed class UnitStack : ITickable, IEnumerable<GameObject>
+    public sealed class UnitStack : IEnumerable<GameObject>
     {
         private HashSet<GameObject> _units;
 
@@ -17,6 +17,7 @@ namespace Game.GameEngine.PlayerContext
 
         public IEnumerator<GameObject> GetEnumerator()
         {
+            throw new NotImplementedException();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

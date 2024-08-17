@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Network.Input;
 using Fusion;
 using Fusion.Sockets;
 using UnityEngine;
@@ -20,9 +19,6 @@ namespace System.Networking.Startup
         [SerializeField] 
         private string _sessionName;
 
-        [SerializeField]
-        private NetworkInputSender _networkInputSender;
-        
         private void OnValidate()
         {
             _runner = GetComponent<NetworkRunner>();
@@ -70,7 +66,7 @@ namespace System.Networking.Startup
 
         void INetworkRunnerCallbacks.OnInput(NetworkRunner runner, NetworkInput input)
         {
-            _networkInputSender.SendInput(ref input);
+            //Nothing...
         }
         
         void INetworkRunnerCallbacks.OnObjectExitAOI(NetworkRunner runner, NetworkObject obj, PlayerRef player) { }
