@@ -15,10 +15,9 @@ namespace Game.GameEngine.Entities
 
         private void OnTriggerEnter(Collider other)
         {
-            NetworkObject target = other.GetComponentInParent<NetworkObject>();
-            if (target != null)
+            if (other.TryGetComponent(out NetworkObject networkObject))
             {
-                _dealDamageComponent.RpcDealDamage(target);
+                _dealDamageComponent.RpcDealDamage(networkObject);
             }
         }
     }

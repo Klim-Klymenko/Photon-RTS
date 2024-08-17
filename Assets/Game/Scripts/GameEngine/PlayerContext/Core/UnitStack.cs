@@ -9,7 +9,7 @@ namespace Game.GameEngine.PlayerContext
     public sealed class UnitStack : MonoBehaviour
     {
         private HashSet<GameObject> units;
-        private readonly List<GameObject> cache;
+        private readonly List<GameObject> cache = new();
 
         private void Awake()
         {

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Game.GameEngine.Entities
 {
@@ -14,6 +15,12 @@ namespace Game.GameEngine.Entities
         
         private Vector3 destination;
         private bool isMoving;
+
+        private void Awake()
+        {
+            _moveComponent = this.GetComponent<MoveComponent>();
+            _rotateComponent = this.GetComponent<RotateComponent>();
+        }
 
         public void SetDestination(Vector3 targetPosition)
         {
