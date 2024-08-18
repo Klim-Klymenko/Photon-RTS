@@ -18,8 +18,6 @@ namespace Game.GameEngine.Entities
 
         public void DealDamage(GameObject target)
         {
-            Debug.Log("DEAL DAMAGE");
-            
             if (!target.CompareTag(GameObjectTags.Unit)) return;
             if (!target.TryGetComponent(out HealthComponent damageable)) return;
             if (!target.TryGetComponent(out TeamComponent teamComponent)) return;
