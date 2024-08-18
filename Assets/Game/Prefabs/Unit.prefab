@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 8689518668416329843}
   - component: {fileID: 2199739659335494636}
   - component: {fileID: 9150573844965656872}
+  - component: {fileID: 2810311227428231011}
   - component: {fileID: 3906395927307673324}
   - component: {fileID: 4415097171091205760}
   - component: {fileID: 2850080590663223725}
@@ -142,7 +143,7 @@ Transform:
   m_Children:
   - {fileID: 5334773230082732509}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6776285915615885290
 MonoBehaviour:
@@ -182,7 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4431bb42ec964e098cb79cf7415597d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
+  damage: 1
 --- !u!114 &6149751678584925319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,9 +240,30 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2810311227428231011
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3699421184305433153}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5, y: 1, z: 1.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3906395927307673324
 Rigidbody:
@@ -252,8 +274,8 @@ Rigidbody:
   m_GameObject: {fileID: 3699421184305433153}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 1
-  m_AngularDrag: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -291,7 +313,6 @@ MonoBehaviour:
   - {fileID: 5852143783273309726}
   - {fileID: 6307186935537588390}
   - {fileID: 4471509926577474463}
-  - {fileID: 2714936128978157309}
 --- !u!114 &2850080590663223725
 MonoBehaviour:
   m_ObjectHideFlags: 0

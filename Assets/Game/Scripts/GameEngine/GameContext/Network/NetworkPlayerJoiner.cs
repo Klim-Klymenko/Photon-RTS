@@ -25,7 +25,7 @@ namespace System.Network.Spawn
                 if (this.Runner.IsServer)
                 {
                     GameObject playerGO = _playerService.GetPlayer(TeamAffiliation.Red);
-                    this.GetComponent<PlayerProvider>().CurrentPlayer = playerGO;
+                    this.GetComponent<PlayerProvider>().CurrentPlayer = playerGO;    
                 }
             }
 

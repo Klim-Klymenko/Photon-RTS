@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game.GameEngine.Entities
 {
     [RequireComponent(typeof(NetworkDealDamageComponent))]
-    public sealed class NetworkColliderAttackRule : NetworkBehaviour
+    public sealed class NetworkTriggerAttackRule : MonoBehaviour
     {
         private NetworkDealDamageComponent _dealDamageComponent;
 
@@ -13,14 +13,9 @@ namespace Game.GameEngine.Entities
             _dealDamageComponent = this.GetComponent<NetworkDealDamageComponent>();
         }
 
-        private void OnCollisionEnter(Collision collision)
+        private void OnTriggerEnter(Collider other)
         {
-            if (this.Runner == null || !this.Runner.IsServer)
-            {
-                return;
-            }
-
-            if (collision.gameObject.TryGetComponent(out NetworkObject networkObject))
+            if (other.TryGetComponent(out NetworkObject networkObject))
             {
                 _dealDamageComponent.RpcDealDamage(networkObject);
             }
